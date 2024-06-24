@@ -1,0 +1,126 @@
+@use "./colors" as colors;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  // background-color: colors.$mainColor;
+  background-color: whitesmoke;
+  background-image: linear-gradient(
+      30deg,
+      rgba(255, 255, 255, 0.5) 10%,
+      transparent 10%
+    ),
+    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 20%, transparent 20%),
+    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 30%, transparent 30%),
+    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 40%, transparent 40%),
+    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 50%, transparent 50%),
+    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 60%, transparent 60%),
+    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 70%, transparent 70%),
+    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 80%, transparent 80%),
+    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 90%, transparent 90%);
+  background-size: 100px 100px;
+  background-attachment: fixed;
+  background-size: 20px 20px;
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+li {
+  list-style: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: colors.$secondColor;
+}
+
+h2,
+h1,
+h3 {
+  text-transform: uppercase;
+}
+
+main {
+  margin-top: 20rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.container {
+  margin: 0 auto;
+  height: 80vh;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.containerSecond {
+  align-items: center;
+}
+
+.containerThird {
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  min-width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.imageSpiritualHealing {
+  background-image: url("../images/image-spiritual-healing.JPG");
+}
+
+.imageAboutMe {
+  background-image: url("../images/monika-zakrzewska.PNG");
+}
+
+.imageWhy {
+  background-image: url("../images/image-why.JPG");
+}
+
+.text {
+  position: relative;
+  top: 10rem;
+  margin-left: 2rem;
+  // flex: 1;
+}
