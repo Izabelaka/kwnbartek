@@ -114,7 +114,6 @@ h1 {
 }
 
 .text {
-  position: relative;
   top: 10rem;
   display: flex;
   flex-direction: column;
