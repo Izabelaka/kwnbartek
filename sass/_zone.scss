@@ -29,8 +29,11 @@
       :hover,
       :focus {
         // color: #c2c2d4;
-        color: colors.$logo;
-        color: colors.$text;
+        // color: colors.$logo;
+        // color: colors.$text;
+        color: rgb(236, 234, 234);
+        text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.5);
+        // box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.137);
       }
     }
   }

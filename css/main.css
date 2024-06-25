@@ -124,6 +124,7 @@ h1 {
 
 .titleStyle {
   margin-bottom: 2rem;
+  margin-top: 1rem;
   font-size: 4rem;
   line-height: 1.6;
   font-weight: bold;
@@ -291,28 +292,35 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem;
+  padding: 1.6rem;
   width: 100%;
   font-size: 1.8rem;
   text-align: left;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
-  color: white;
-  background-color: #1a9cad;
-  text-transform: uppercase;
+  color: #1a9cad;
   transition: color 0.8s ease;
+  border: 1px solid #1a9cad;
+  border-radius: 8px;
 }
 .accordion__btn:hover, .accordion__btn:focus {
-  background-color: #ffb6c1;
-  color: white;
-  outline: none;
+  background-color: white;
+  background-color: #1a9cad;
+  color: whitesmoke;
+}
+.accordion__btn:hover .accordion__icon__first, .accordion__btn:focus .accordion__icon__first {
+  background-color: white;
+}
+.accordion__btn:hover .accordion__icon__second, .accordion__btn:focus .accordion__icon__second {
+  background-color: white;
 }
 .accordion__text-box {
   margin-left: 10px;
   padding: 1rem 2rem;
   display: none;
   color: #4a4a4a;
+  font-size: 1.5rem;
+  line-height: 1.4;
 }
 .accordion__icon {
   display: flex;
@@ -323,24 +331,24 @@ h1 {
   position: relative;
 }
 .accordion__icon__first {
-  background-color: white;
+  background-color: #1a9cad;
   position: absolute;
-  height: 5px;
+  height: 4px;
   width: 30px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, background-color 0.8s ease;
 }
 .accordion__icon__second {
-  background-color: white;
+  background-color: #1a9cad;
   position: absolute;
-  width: 5px;
+  width: 4px;
   height: 30px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, background-color 0.8s ease;
 }
 .accordion__active {
   display: block;
@@ -372,8 +380,8 @@ h1 {
 }
 .zone__aside__title :hover,
 .zone__aside__title :focus {
-  color: #1a9cad;
-  color: #4a4a4a;
+  color: rgb(236, 234, 234);
+  text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.5);
 }
 .zone__main {
   width: 100%;

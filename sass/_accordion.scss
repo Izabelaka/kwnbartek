@@ -9,23 +9,42 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5rem;
+    padding: 1.6rem;
     width: 100%;
     font-size: 1.8rem;
     text-align: left;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
-    color: white;
-    background-color: colors.$logo;
-    text-transform: uppercase;
+
+    color: colors.$logo;
+    // background-color: colors.$logo;
+    // background-color: #fff;
+    // text-transform: uppercase;
     transition: color 0.8s ease;
+    border: 1px solid colors.$logo;
+    border-radius: 8px;
+    // margin: 1rem;
   }
   &__btn:hover,
   &__btn:focus {
-    background-color: colors.$pink;
-    color: white;
-    outline: none;
+    // background-color: colors.$pink;
+    // color: white;
+    // outline: none;
+    // background-color: #fff;
+    // background-color: #fad1b5;
+    background-color: white;
+    background-color: colors.$logo;
+    color: whitesmoke;
+  }
+
+  &__btn:hover .accordion__icon__first,
+  &__btn:focus .accordion__icon__first {
+    background-color: white;
+  }
+
+  &__btn:hover .accordion__icon__second,
+  &__btn:focus .accordion__icon__second {
+    background-color: white;
   }
 
   &__text-box {
@@ -33,6 +52,8 @@
     padding: 1rem 2rem;
     display: none;
     color: colors.$text;
+    font-size: 1.5rem;
+    line-height: 1.4;
   }
   &__icon {
     display: flex;
@@ -43,24 +64,26 @@
     position: relative;
 
     &__first {
-      background-color: white;
+      // background-color: white;
+      background-color: colors.$logo;
       position: absolute;
-      height: 5px;
+      height: 4px;
       width: 30px;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      transition: transform 0.5s ease;
+      transition: transform 0.5s ease, background-color 0.8s ease;
     }
     &__second {
-      background-color: white;
+      // background-color: white;
+      background-color: colors.$logo;
       position: absolute;
-      width: 5px;
+      width: 4px;
       height: 30px;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      transition: transform 0.5s ease;
+      transition: transform 0.5s ease, background-color 0.8s ease;
     }
   }
 
