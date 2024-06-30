@@ -1,6 +1,8 @@
 @use "./colors" as colors;
 
 .accordion {
+  background-image: url("../images/logo/SVG/Zasób.svg");
+
   &__box {
     font-size: 2rem;
   }
@@ -22,7 +24,11 @@
     // text-transform: uppercase;
     transition: color 0.8s ease;
     border: 1px solid colors.$logo;
-    border-radius: 8px;
+    // background-image: url("../images/logo/SVG/Zasób.svg");
+    // backdrop-filter: blur(8px);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
     // margin: 1rem;
   }
   &__btn:hover,
@@ -54,6 +60,7 @@
     color: colors.$text;
     font-size: 1.5rem;
     line-height: 1.4;
+    backdrop-filter: blur(8px);
   }
   &__icon {
     display: flex;

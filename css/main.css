@@ -285,6 +285,9 @@ h1 {
   width: 100%;
 }
 
+.accordion {
+  background-image: url("../images/logo/SVG/Zasób.svg");
+}
 .accordion__box {
   font-size: 2rem;
 }
@@ -301,7 +304,6 @@ h1 {
   color: #1a9cad;
   transition: color 0.8s ease;
   border: 1px solid #1a9cad;
-  border-radius: 8px;
 }
 .accordion__btn:hover, .accordion__btn:focus {
   background-color: white;
@@ -321,6 +323,8 @@ h1 {
   color: #4a4a4a;
   font-size: 1.5rem;
   line-height: 1.4;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 .accordion__icon {
   display: flex;
