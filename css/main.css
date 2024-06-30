@@ -287,6 +287,11 @@ h1 {
 
 .accordion {
   background-image: url("../images/logo/SVG/Zasób.svg");
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  background-image: url(../images/logo/SVG/Zasób.svg);
+  background-position: center;
+  background-attachment: fixed;
 }
 .accordion__box {
   font-size: 2rem;
