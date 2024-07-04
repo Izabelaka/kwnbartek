@@ -1,127 +1,118 @@
 @use "./colors" as colors;
 
 .zone {
-	&__wrapper {
-		display: flex;
-		justify-content: space-between;
-		flex-direction: column;
-	}
-	&__aside {
-		width: 100%;
-		background-color: colors.$pink;
-		color: white;
-		padding: 20px;
-		height: 100%;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  &__aside {
+    width: 100%;
+    background-color: colors.$logo;
+    color: white;
+    padding: 2rem;
+    height: 100%;
+    top: 100px;
+    margin-bottom: 1rem;
 
-		top: 100px;
+    &__title {
+      font-size: 1.5rem;
+      padding: 1rem;
+      color: white;
+      transition: color 0.8s ease;
 
-		margin-bottom: 10px;
+      :hover,
+      :focus {
+        color: rgb(236, 234, 234);
+        text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
 
-		&__title {
-			font-size: 1.5rem;
-			padding: 1rem;
-			color: white;
-			transition: color 0.8s ease;
+  &__main {
+    width: 100%;
+    float: right;
 
-			:hover,
-			:focus {
-				color: rgb(236, 234, 234);
-				text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.5);
-			}
-		}
-	}
+    &__box {
+      margin: 4rem 1rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid colors.$logo;
+      position: relative;
+      padding-top: 10rem;
 
-	&__main {
-		width: 100%;
-		float: right;
-
-		&__box {
-			margin: 4rem 1rem;
-			padding-bottom: 3rem;
-			border-bottom: 1px solid colors.$pink;
-			position: relative;
-			padding-top: 100px;
-
-			&::before {
-				content: "";
-				display: block;
-				height: 100px;
-				margin-top: -100px;
-				background-image: linear-gradient(
-					90deg,
-					rgba(6, 1, 70, 0.914) 0%,
-					rgba(21, 11, 70, 0.7) 28%,
-					rgba(6, 1, 70, 0.969) 100%
-				);
-				background: url("../images/pe.jpg") center center no-repeat;
-				background-size: cover;
-			}
-		}
-		&__title {
-			font-size: 3.5rem;
-			margin: 1rem 0;
-			margin-left: 1.5rem;
-			text-align: center;
-		}
-		&__text {
-			font-size: 1.5rem;
-			line-height: 1.6;
-			padding: 10px;
-			text-align: center;
-		}
-	}
+      &::before {
+        content: "";
+        display: block;
+        height: 10rem;
+        margin-top: -10rem;
+        background-image: linear-gradient(
+          90deg,
+          rgba(6, 1, 70, 0.914) 0%,
+          rgba(21, 11, 70, 0.7) 28%,
+          rgba(6, 1, 70, 0.969) 100%
+        );
+        background: url("../images/pe.jpg") center center no-repeat;
+        background-size: cover;
+      }
+    }
+    &__title {
+      font-size: 3.5rem;
+      margin: 1rem 0;
+      margin-left: 1.5rem;
+      text-align: center;
+    }
+    &__text {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      padding: 1rem;
+      text-align: center;
+    }
+  }
 }
 
 .arrow-btn {
-	position: fixed;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 1.5rem;
+  background-color: colors.$logo;
+  border: none;
+  border-radius: 50%;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 36px -11px rgb(255, 255, 255);
+  z-index: 12000;
+  font-size: 3rem;
 
-	margin: 15px;
-	background-color: colors.$pink;
-	border: none;
-	border-radius: 50%;
-	padding: 15px 20px;
-	cursor: pointer;
-	box-shadow: 0px 0px 36px -11px rgb(255, 255, 255);
-	z-index: 12000;
-	font-size: 30px;
-
-	i {
-		color: white;
-	}
+  i {
+    color: white;
+  }
 }
 
-// ------------------------------------------------------blog desktop
 @media (min-width: 768px) {
-	.zone {
-		&__wrapper {
-			flex-direction: row;
-		}
-		&__aside {
-			width: 30%;
-			background-color: colors.$logo;
+  .zone {
+    &__wrapper {
+      flex-direction: row;
+    }
+    &__aside {
+      width: 30%;
+      position: sticky;
+      margin-bottom: 5rem;
+      margin-top: 1rem;
+    }
 
-			position: sticky;
+    &__main {
+      width: 70%;
 
-			margin-bottom: 50px;
-			margin-top: 10px;
-		}
+      &__box {
+        margin-top: 1rem;
+        margin-left: 2rem;
+      }
+    }
+  }
 
-		&__main {
-			width: 70%;
-
-			&__box {
-				margin-top: 10px;
-				margin-left: 2rem;
-
-				border-bottom: 1px solid colors.$logo;
-			}
-		}
-	}
-
-	.arrow-btn {
-		display: none;
-	}
+  .arrow-btn {
+    display: none;
+  }
 }

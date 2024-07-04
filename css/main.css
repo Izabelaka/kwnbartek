@@ -336,7 +336,7 @@ main {
 
 .contactme {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/3Big.JPG");
-  padding: 10px 10px;
+  padding: 1rem 1rem;
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
@@ -351,7 +351,7 @@ main {
   font-family: "Cormorant Garamond", serif;
   text-transform: uppercase;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 3.5rem;
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
   border-style: solid;
   border-width: 1px 0px 1px 0px;
@@ -359,7 +359,7 @@ main {
 }
 .contactme__btn {
   padding: 1em 1.5em;
-  margin-top: 30px;
+  margin-top: 3rem;
   background-color: #fff;
   color: black;
   border: 1px solid #1a9cad;
@@ -383,7 +383,6 @@ main {
 
 @media (min-width: 768px) {
   .contactme {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/3Big.JPG");
     background-attachment: fixed;
     height: 40rem;
     margin-top: 10rem;
@@ -427,7 +426,7 @@ main {
   flex-direction: column;
   justify-content: flex-end;
   border-radius: 20px;
-  gap: 20px;
+  gap: 2rem;
   transform-origin: center center;
   transition: border 0.8s ease, box-shadow 0.8s ease, color 0.8s ease;
   background: linear-gradient(to right top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
@@ -438,11 +437,11 @@ main {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 12rem;
+  font-size: 10rem;
   color: #1a9cad;
   transition: color 0.8s ease;
-  padding-right: 10px;
-  opacity: 0.3;
+  padding-right: 1rem;
+  opacity: 0.1;
 }
 .opinions__card__title {
   font-size: 1.8rem;
@@ -451,12 +450,12 @@ main {
   background-color: #1a9cad;
   color: #fff;
   border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
+  padding: 1rem;
+  margin: 1rem;
 }
 .opinions__card__text {
-  padding: 0 20px;
-  font-size: 13px;
+  padding: 0 2rem;
+  font-size: 1.3rem;
   padding-top: 3rem;
   z-index: 1;
 }
@@ -493,7 +492,7 @@ main {
 }
 .contact__title {
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 3rem;
   line-height: 1.1667;
   letter-spacing: 0.03em;
   color: rgb(43, 43, 43);
@@ -501,12 +500,8 @@ main {
   font-weight: bold;
   margin: 4rem;
 }
-.contact__map iframe {
-  width: 100%;
-  height: 400px;
-}
 .contact__wrapper {
-  padding: 20px;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -521,7 +516,7 @@ main {
   flex-direction: column;
   text-align: center;
   line-height: 1.6;
-  gap: 10px;
+  gap: 1rem;
 }
 .contact__text-link {
   font-family: "Cormorant Garamond", serif;
@@ -561,8 +556,8 @@ main {
   font-weight: bold;
 }
 .footer__text img {
-  margin-left: 10px;
-  margin-bottom: 5px;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -575,8 +570,8 @@ main {
   }
   .contact__socials {
     display: flex;
-    gap: 20px;
-    padding-top: 10px;
+    gap: 2rem;
+    padding-top: 1rem;
     border-top: 1px solid #1a9cad;
   }
 }
@@ -633,7 +628,7 @@ main {
   background-color: white;
 }
 .accordion__text-box {
-  margin-left: 10px;
+  margin-left: 1rem;
   padding: 1rem 2rem;
   display: none;
   color: rgb(43, 43, 43);
@@ -646,15 +641,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
   position: relative;
 }
 .accordion__icon__first {
   background-color: #1a9cad;
   position: absolute;
   height: 4px;
-  width: 30px;
+  width: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -664,7 +659,7 @@ main {
   background-color: #1a9cad;
   position: absolute;
   width: 4px;
-  height: 30px;
+  height: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -685,12 +680,12 @@ main {
 }
 .zone__aside {
   width: 100%;
-  background-color: #ffb6c1;
+  background-color: #1a9cad;
   color: white;
-  padding: 20px;
+  padding: 2rem;
   height: 100%;
   top: 100px;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 .zone__aside__title {
   font-size: 1.5rem;
@@ -710,15 +705,15 @@ main {
 .zone__main__box {
   margin: 4rem 1rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid #ffb6c1;
+  border-bottom: 1px solid #1a9cad;
   position: relative;
-  padding-top: 100px;
+  padding-top: 10rem;
 }
 .zone__main__box::before {
   content: "";
   display: block;
-  height: 100px;
-  margin-top: -100px;
+  height: 10rem;
+  margin-top: -10rem;
   background-image: linear-gradient(90deg, rgba(6, 1, 70, 0.914) 0%, rgba(21, 11, 70, 0.7) 28%, rgba(6, 1, 70, 0.969) 100%);
   background: url("../images/pe.jpg") center center no-repeat;
   background-size: cover;
@@ -732,7 +727,7 @@ main {
 .zone__main__text {
   font-size: 1.5rem;
   line-height: 1.6;
-  padding: 10px;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -741,15 +736,15 @@ main {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  margin: 15px;
-  background-color: #ffb6c1;
+  margin: 1.5rem;
+  background-color: #1a9cad;
   border: none;
   border-radius: 50%;
-  padding: 15px 20px;
+  padding: 1.5rem 2rem;
   cursor: pointer;
   box-shadow: 0px 0px 36px -11px rgb(255, 255, 255);
   z-index: 12000;
-  font-size: 30px;
+  font-size: 3rem;
 }
 .arrow-btn i {
   color: white;
@@ -761,18 +756,16 @@ main {
   }
   .zone__aside {
     width: 30%;
-    background-color: #1a9cad;
     position: sticky;
-    margin-bottom: 50px;
-    margin-top: 10px;
+    margin-bottom: 5rem;
+    margin-top: 1rem;
   }
   .zone__main {
     width: 70%;
   }
   .zone__main__box {
-    margin-top: 10px;
+    margin-top: 1rem;
     margin-left: 2rem;
-    border-bottom: 1px solid #1a9cad;
   }
   .arrow-btn {
     display: none;
