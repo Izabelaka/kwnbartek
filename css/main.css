@@ -8,12 +8,12 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 li {
@@ -27,17 +27,17 @@ ol {
 
 a {
   text-decoration: none;
-  color: #aec6cf;
+  color: rgb(43, 43, 43);
 }
 
-h2,
 h1,
+h2,
 h3 {
   text-transform: uppercase;
 }
 
 main {
-  margin-top: 10rem;
+  margin-top: 2rem;
 }
 
 .wrapper {
@@ -47,25 +47,9 @@ main {
 }
 
 .container {
-  margin: 0 auto;
-  height: 80vh;
-  width: 100%;
-  max-width: 1200px;
+  height: auto;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: space-around;
-  align-items: baseline;
-}
-
-.containerSecond {
-  align-items: center;
-}
-
-.containerThird {
-  flex-direction: row-reverse;
-  align-items: center;
+  flex-direction: column;
 }
 
 .centered {
@@ -74,31 +58,41 @@ main {
   align-items: center;
 }
 
-h1 {
+.titleStyle {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  line-height: 1.6;
+  font-weight: bold;
+  color: #1a9cad;
+}
+
+.titleStyle {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  line-height: 1.6;
+  font-weight: bold;
+  color: #1a9cad;
+}
+
+.text {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin: 4rem 2rem;
+  padding: 2rem;
 }
 
 .image {
-  min-width: 50%;
-  height: 80%;
+  min-width: 100%;
+  min-height: 45rem;
   display: flex;
   background-size: cover;
   background-position: center;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
-  opacity: 0.9;
-}
-
-.image:hover {
-  transform: scale(1.05); /* Delikatne powiększenie zdjęcia przy najechaniu */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Silniejszy cień dla lepszego efektu przy najechaniu */
-  opacity: 1;
 }
 
 .imageSpiritualHealing {
@@ -113,24 +107,66 @@ h1 {
   background-image: url("../images/image-why.JPG");
 }
 
-.text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.4rem;
-  line-height: 1.6;
-  margin: 4rem 2rem;
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
 }
 
-.titleStyle {
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-  font-size: 4rem;
-  line-height: 1.6;
-  font-weight: bold;
-  color: #1a9cad;
+.textMargin {
+  margin-top: 8rem;
 }
 
+@media (min-width: 576px) and (max-width: 767px) {
+  .titleStyle {
+    font-size: 2.5rem;
+  }
+  .text {
+    margin: 4rem 2rem;
+    padding: 4rem;
+  }
+}
+@media (min-width: 768px) {
+  main {
+    margin-top: 10rem;
+  }
+  .container {
+    margin: 0 auto;
+    height: 80vh;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  .containerSecond {
+    align-items: center;
+  }
+  .containerThird {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .titleStyle {
+    font-size: 4rem;
+  }
+  .image {
+    min-width: 50%;
+    height: 80%;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
+    opacity: 0.9;
+  }
+  .image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+  }
+}
 .burgerBtn {
   position: fixed;
   left: 2rem;
@@ -142,84 +178,94 @@ h1 {
 }
 .burgerBtn:focus {
   outline: none;
-  border: 1px solid grey;
+  border: 1px solid #1a9cad;
 }
 .burgerBtn__padding {
   position: relative;
   transition: transform 0.5s ease;
 }
 .burgerBtn__bars {
-  background-color: black;
+  background-color: rgb(43, 43, 43);
   height: 5px;
   width: 35px;
   margin: 6px 0;
   transition: background-color 0.8s ease-in;
 }
-.burgerBtn .burgerBtn:hover .burgerBtn__bars {
-  background-color: black;
+
+.burgerBtn:hover .burgerBtn__bars {
+  background-color: #1a9cad;
 }
-.burgerBtn .burgerBtn:hover .burgerBtn__padding {
+
+.burgerBtn:hover .burgerBtn__padding {
   transform: rotate(90deg);
 }
 
-@media (max-width: 767px) {
-  .navMobile {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    z-index: 10000;
-    height: 8rem;
-    background-color: #cfe3d8;
-  }
-  .navMobile__socials {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    gap: 2rem;
-    z-index: 10000;
-  }
-  .navMobile__socials--style {
-    color: rgb(99, 99, 215);
-    transition: color 0.5s ease;
-  }
-  .navMobile__socials--style:hover,
-  .navMobile__socials--style:focus {
-    color: greenyellow;
-  }
-  .mobileNavigation {
-    position: relative;
-    top: 8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    font-size: 2rem;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    background-color: grey;
-  }
-  .mobileNavigation__items {
-    display: flex;
-    flex-direction: column;
-    text-transform: uppercase;
-    gap: 4rem;
-  }
-  .mobileNavigation__item a {
-    color: whitesmoke;
-  }
-  .navigationHidden {
-    opacity: 1;
-    transform: translateX(0);
+@media (min-width: 768px) {
+  .burgerBtn {
+    display: none;
   }
 }
+.navMobile {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  z-index: 10000;
+  height: 8rem;
+  background-color: white;
+}
+.navMobile__socials {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  gap: 2rem;
+  z-index: 10000;
+}
+.navMobile__socials--style {
+  color: rgb(43, 43, 43);
+  transition: color 0.5s ease;
+}
+
+.navMobile__socials--style:hover,
+.navMobile__socials--style:focus {
+  color: #1a9cad;
+}
+
+.mobileNavigation {
+  position: fixed;
+  top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-size: 2rem;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  background-color: rgb(147, 147, 182);
+  z-index: 100;
+}
+.mobileNavigation__items {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  gap: 4rem;
+}
+.mobileNavigation__item a {
+  color: white;
+}
+
+.navigationHidden {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 @media (min-width: 768px) {
   .navMobile {
     display: none;
@@ -232,13 +278,17 @@ h1 {
   display: none;
 }
 
+.navigationMain {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .navigationMain {
     position: fixed;
     height: 9rem;
     width: 100%;
     top: 0rem;
-    background-color: #fff;
+    background-color: white;
     display: flex;
     text-transform: uppercase;
     font-weight: bold;
@@ -261,7 +311,6 @@ h1 {
     max-width: 100%;
     height: auto;
     width: auto;
-    vertical-align: middle;
     scale: 1.5;
   }
   .navigationMain__item {
@@ -269,7 +318,7 @@ h1 {
     text-align: center;
   }
   .navigationMain a {
-    color: #4a4a4a;
+    color: rgb(43, 43, 43);
     flex: 1;
     transition: color 0.8s ease;
   }
@@ -283,6 +332,268 @@ h1 {
 .section {
   position: relative;
   width: 100%;
+}
+
+.contactme {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/3Big.JPG");
+  padding: 10px 10px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.contactme__text {
+  font-family: "Cormorant Garamond", serif;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.6rem;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+  border-style: solid;
+  border-width: 1px 0px 1px 0px;
+  border-color: white;
+}
+.contactme__btn {
+  padding: 1em 1.5em;
+  margin-top: 30px;
+  background-color: #fff;
+  color: black;
+  border: 1px solid #1a9cad;
+  font-size: 1.6rem;
+  transition: background-color 0.8s ease;
+}
+.contactme__btn a {
+  color: black;
+  font-weight: bold;
+  transition: color 0.8s ease;
+}
+
+.contactme__btn:hover,
+.contactme__btn:focus {
+  background-color: #fff;
+}
+.contactme__btn:hover a,
+.contactme__btn:focus a {
+  color: #1a9cad;
+}
+
+@media (min-width: 768px) {
+  .contactme {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/3Big.JPG");
+    background-attachment: fixed;
+    height: 40rem;
+    margin-top: 10rem;
+  }
+  .contactme__text {
+    font-size: 4rem;
+  }
+}
+.opinions {
+  padding: 8rem 1rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/logo/logo4.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+}
+.opinions__title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 1.1667;
+  letter-spacing: 0.03em;
+  color: rgb(43, 43, 43);
+  text-align: center;
+  font-weight: bold;
+  padding: 4rem;
+}
+.opinions__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transform-origin: center center;
+}
+.opinions__card {
+  position: relative;
+  width: 90%;
+  border: 1px solid #1a9cad;
+  align-items: flex-end;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 20px;
+  gap: 20px;
+  transform-origin: center center;
+  transition: border 0.8s ease, box-shadow 0.8s ease, color 0.8s ease;
+  background: linear-gradient(to right top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+.opinions__card i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12rem;
+  color: #1a9cad;
+  transition: color 0.8s ease;
+  padding-right: 10px;
+  opacity: 0.3;
+}
+.opinions__card__title {
+  font-size: 1.8rem;
+  text-align: center;
+  transition: color 1s ease;
+  background-color: #1a9cad;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+.opinions__card__text {
+  padding: 0 20px;
+  font-size: 13px;
+  padding-top: 3rem;
+  z-index: 1;
+}
+
+.opinions__card:hover,
+.opinions__card:focus {
+  border: 1px solid white;
+  box-shadow: 0px 8px 16px 0px #fff;
+}
+.opinions__card:hover i,
+.opinions__card:focus i {
+  color: white;
+}
+.opinions__card:hover h4,
+.opinions__card:focus h4 {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .opinions__wrapper {
+    flex-direction: row;
+  }
+  .opinions__card {
+    flex-grow: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .opinions__wrapper {
+    gap: 5rem;
+  }
+}
+.contact {
+  background-color: white;
+}
+.contact__title {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 1.1667;
+  letter-spacing: 0.03em;
+  color: rgb(43, 43, 43);
+  text-align: center;
+  font-weight: bold;
+  margin: 4rem;
+}
+.contact__map iframe {
+  width: 100%;
+  height: 400px;
+}
+.contact__wrapper {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact__text {
+  font-style: normal;
+  font-size: 1.6rem;
+  letter-spacing: 0.03em;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 1.6;
+  gap: 10px;
+}
+.contact__text-link {
+  font-family: "Cormorant Garamond", serif;
+  color: rgb(43, 43, 43);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.2rem;
+  transition: color 0.6s ease;
+  line-height: 1.2;
+}
+.contact__text-link:hover, .contact__text-link:focus {
+  color: #1a9cad;
+}
+.contact__text-link i {
+  margin-right: 0.5rem;
+  color: #1a9cad;
+}
+.contact__socials {
+  margin: 2rem;
+}
+
+.footer {
+  background-color: #1a9cad;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+.footer__text {
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.footer__text img {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    background-color: white;
+  }
+  .contact__text {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .contact__socials {
+    display: flex;
+    gap: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #1a9cad;
+  }
+}
+.offers-header {
+  filter: brightness(85%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  height: 50rem;
+}
+
+.offers-whyImg {
+  background-image: url("../images/image-why.JPG");
+}
+
+.offers-spiritualhealingImg {
+  background-image: url("../images/header-spiritual-healing.JPG");
 }
 
 .accordion {
@@ -306,6 +617,7 @@ h1 {
   border: none;
   cursor: pointer;
   color: #1a9cad;
+  background-color: white;
   transition: color 0.8s ease;
   border: 1px solid #1a9cad;
 }
@@ -324,7 +636,7 @@ h1 {
   margin-left: 10px;
   padding: 1rem 2rem;
   display: none;
-  color: #4a4a4a;
+  color: rgb(43, 43, 43);
   font-size: 1.5rem;
   line-height: 1.4;
   -webkit-backdrop-filter: blur(8px);
@@ -465,265 +777,4 @@ h1 {
   .arrow-btn {
     display: none;
   }
-}
-.contact {
-  background-color: whitesmoke;
-}
-.contact__title {
-  text-transform: uppercase;
-  font-size: 30px;
-  line-height: 1.1667;
-  letter-spacing: 0.03em;
-  color: #4a4a4a;
-  text-align: center;
-  font-weight: bold;
-  margin: 4rem;
-}
-.contact__map iframe {
-  width: 100%;
-  height: 400px;
-}
-.contact__wrapper {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.contact__text {
-  font-style: normal;
-  font-size: 1.6rem;
-  letter-spacing: 0.03em;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  line-height: 1.6;
-  gap: 10px;
-}
-.contact__text-link {
-  font-family: "Cormorant Garamond", serif;
-  color: #4a4a4a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 0.2rem;
-  transition: color 0.6s ease;
-  line-height: 1.2;
-}
-.contact__text-link:hover, .contact__text-link:focus {
-  color: #1a9cad;
-}
-.contact__text-link i {
-  margin-right: 0.5rem;
-  color: #1a9cad;
-}
-.contact__socials {
-  margin: 2rem;
-}
-
-.footer {
-  background-color: #1a9cad;
-  border-top: 1px solid rgba(255, 255, 255, 0.6);
-}
-.footer__text {
-  padding: 1rem;
-  text-align: center;
-  color: #fff;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-.footer__text img {
-  margin-left: 10px;
-  margin-bottom: 5px;
-}
-
-@media (min-width: 768px) {
-  .contact {
-    background-color: whitesmoke;
-  }
-  .contact__text {
-    flex-direction: row;
-    gap: 3rem;
-  }
-  .contact__socials {
-    display: flex;
-    gap: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #1a9cad;
-  }
-}
-.opinions {
-  padding: 8rem 1rem;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/logo/logo4.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll;
-}
-.opinions__title {
-  text-transform: uppercase;
-  font-size: 30px;
-  line-height: 1.1667;
-  letter-spacing: 0.03em;
-  color: #4a4a4a;
-  text-align: center;
-  font-weight: bold;
-  padding: 4rem;
-}
-.opinions__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  transform-origin: center center;
-}
-.opinions__card {
-  position: relative;
-  width: 90%;
-  border: 1px solid #1a9cad;
-  align-items: flex-end;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  border-radius: 20px;
-  gap: 20px;
-  transform-origin: center center;
-  transition: border 0.8s ease, box-shadow 0.8s ease, color 0.8s ease;
-  background: linear-gradient(to right top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
-}
-.opinions__card i {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 12rem;
-  color: #1a9cad;
-  transition: color 0.8s ease;
-  padding-right: 10px;
-  opacity: 0.3;
-}
-.opinions__card__title {
-  font-size: 1.8rem;
-  text-align: center;
-  transition: color 1s ease;
-  background-color: #1a9cad;
-  color: #fff;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
-}
-.opinions__card__text {
-  padding: 0 20px;
-  font-size: 13px;
-  padding-top: 3rem;
-  z-index: 1;
-}
-
-.opinions__card:hover,
-.opinions__card:focus {
-  border: 1px solid white;
-  box-shadow: 0px 8px 16px 0px #fff;
-}
-.opinions__card:hover i,
-.opinions__card:focus i {
-  color: white;
-}
-.opinions__card:hover h4,
-.opinions__card:focus h4 {
-  color: #fff;
-}
-
-@media (min-width: 768px) {
-  .opinions__wrapper {
-    flex-direction: row;
-  }
-  .opinions__card {
-    flex-grow: 1;
-  }
-}
-@media (min-width: 1024px) {
-  .opinions__wrapper {
-    gap: 5rem;
-  }
-}
-.contactme {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/3Big.JPG");
-  padding: 10px 10px;
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll;
-  height: 50rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 10rem;
-}
-.contactme__text {
-  font-family: "Cormorant Garamond", serif;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 3.3rem;
-  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
-  border-style: solid;
-  border-width: 1px 0px 1px 0px;
-  border-color: white;
-}
-.contactme__btn {
-  padding: 1em 1.5em;
-  margin-top: 30px;
-  background-color: #fff;
-  color: black;
-  border: 1px solid #1a9cad;
-  font-size: 1.6rem;
-  transition: background-color 0.8s ease;
-}
-.contactme__btn a {
-  color: black;
-  font-weight: bold;
-  transition: color 0.8s ease;
-}
-
-.contactme__btn:hover,
-.contactme__btn:focus {
-  background-color: #fff;
-}
-.contactme__btn:hover a,
-.contactme__btn:focus a {
-  color: #1a9cad;
-}
-
-@media (min-width: 768px) {
-  .contactme {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/3Big.JPG");
-    background-attachment: fixed;
-    height: 40rem;
-  }
-  .contactme__text {
-    font-size: 3.2rem;
-  }
-}
-.offers-header {
-  filter: brightness(85%);
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll;
-  height: 50rem;
-}
-
-.offers-whyImg {
-  background-image: url("../images/image-why.JPG");
-}
-
-.offers-spiritualhealingImg {
-  background-image: url("../images/header-spiritual-healing.JPG");
 }/*# sourceMappingURL=main.css.map */

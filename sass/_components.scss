@@ -3,154 +3,181 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 html {
-  font-size: 10px;
-  scroll-behavior: smooth;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 body {
-  background-color: colors.$mainColor;
-  // background-color: whitesmoke;
-  // background-image: linear-gradient(
-  //     30deg,
-  //     rgba(255, 255, 255, 0.5) 10%,
-  //     transparent 10%
-  //   ),
-  //   linear-gradient(30deg, rgba(255, 255, 255, 0.5) 20%, transparent 20%),
-  //   linear-gradient(30deg, rgba(255, 255, 255, 0.5) 30%, transparent 30%),
-  //   linear-gradient(30deg, rgba(255, 255, 255, 0.5) 40%, transparent 40%),
-  //   linear-gradient(30deg, rgba(255, 255, 255, 0.5) 50%, transparent 50%),
-  //   linear-gradient(30deg, rgba(255, 255, 255, 0.5) 60%, transparent 60%),
-  //   linear-gradient(30deg, rgba(255, 255, 255, 0.5) 70%, transparent 70%),
-  //   linear-gradient(30deg, rgba(255, 255, 255, 0.5) 80%, transparent 80%),
-  //   linear-gradient(30deg, rgba(255, 255, 255, 0.5) 90%, transparent 90%);
-  // background-size: 100px 100px;
-  // background-attachment: fixed;
-  // background-size: 20px 20px;
-  // background-attachment: fixed;
-  // line-height: 1.6;
+	background-color: colors.$mainColor;
 }
 
 li {
-  list-style: none;
+	list-style: none;
 }
 
 ul,
 ol {
-  list-style: none;
+	list-style: none;
 }
 
 a {
-  text-decoration: none;
-  color: colors.$secondColor;
+	text-decoration: none;
+	color: colors.$text;
 }
 
-h2,
 h1,
+h2,
 h3 {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 main {
-  margin-top: 10rem;
+	margin-top: 2rem;
 }
 
 .wrapper {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
 }
 
 .container {
-  margin: 0 auto;
-  height: 80vh;
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: space-around;
-  align-items: baseline;
-}
-
-.containerSecond {
-  align-items: center;
-}
-
-.containerThird {
-  flex-direction: row-reverse;
-  align-items: center;
+	height: auto;
+	display: flex;
+	flex-direction: column;
 }
 
 .centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image {
-  min-width: 50%;
-  height: 80%;
-  display: flex;
-  background-size: cover;
-  background-position: center;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
-  opacity: 0.9;
-}
-
-.image:hover {
-  transform: scale(1.05); /* Delikatne powiększenie zdjęcia przy najechaniu */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Silniejszy cień dla lepszego efektu przy najechaniu */
-  opacity: 1;
-}
-
-.imageSpiritualHealing {
-  background-image: url("../images/image-spiritual-healing.JPG");
-}
-
-.imageAboutMe {
-  background-image: url("../images/monika-zakrzewska.PNG");
-}
-
-.imageWhy {
-  background-image: url("../images/image-why.JPG");
-}
-
-.text {
-  //   position: relative;
-  //   top: 10rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.4rem;
-  line-height: 1.6;
-  margin: 4rem 2rem;
-
-  // flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .titleStyle {
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-  font-size: 4rem;
-  line-height: 1.6;
-  font-weight: bold;
-  color: colors.$logo;
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+	font-size: 2.5rem;
+	line-height: 1.6;
+	font-weight: bold;
+	color: colors.$logo;
+}
+
+.titleStyle {
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+	font-size: 2rem;
+	line-height: 1.6;
+	font-weight: bold;
+	color: colors.$logo;
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.4rem;
+	line-height: 1.6;
+	margin: 4rem 2rem;
+	padding: 2rem;
+}
+
+.image {
+	min-width: 100%;
+	min-height: 45rem;
+	display: flex;
+	background-size: cover;
+	background-position: center;
+	justify-content: center;
+}
+
+.imageSpiritualHealing {
+	background-image: url("../images/image-spiritual-healing.JPG");
+}
+
+.imageAboutMe {
+	background-image: url("../images/monika-zakrzewska.PNG");
+}
+
+.imageWhy {
+	background-image: url("../images/image-why.JPG");
+}
+
+.no-scroll {
+	overflow: hidden;
+	height: 100%;
+}
+
+.textMargin {
+	margin-top: 8rem;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+	.titleStyle {
+		font-size: 2.5rem;
+	}
+
+	.text {
+		margin: 4rem 2rem;
+		padding: 4rem;
+	}
+}
+
+@media (min-width: 768px) {
+	main {
+		margin-top: 10rem;
+	}
+
+	.container {
+		margin: 0 auto;
+		height: 80vh;
+		width: 100%;
+		max-width: 1200px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-content: center;
+		justify-content: space-around;
+		align-items: baseline;
+	}
+
+	.containerSecond {
+		align-items: center;
+	}
+
+	.containerThird {
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+
+	// .centered {
+	// 	display: flex;
+	// 	justify-content: center;
+	// 	align-items: center;
+	// }
+
+	.titleStyle {
+		font-size: 4rem;
+	}
+	.image {
+		min-width: 50%;
+		height: 80%;
+		align-items: center;
+		text-align: center;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
+		opacity: 0.9;
+	}
+
+	.image:hover {
+		transform: scale(1.05);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+		opacity: 1;
+	}
 }

@@ -11,7 +11,7 @@
 
 	&:focus {
 		outline: none;
-		border: 1px solid grey;
+		border: 1px solid #1a9cad;
 	}
 
 	&__padding {
@@ -20,18 +20,24 @@
 	}
 
 	&__bars {
-		background-color: black;
+		background-color: colors.$text;
 		height: 5px;
 		width: 35px;
 		margin: 6px 0;
 		transition: background-color 0.8s ease-in;
 	}
+}
 
-	.burgerBtn:hover .burgerBtn__bars {
-		background-color: colors.$burgerHover;
-	}
+.burgerBtn:hover .burgerBtn__bars {
+	background-color: colors.$logo;
+}
 
-	.burgerBtn:hover .burgerBtn__padding {
-		transform: rotate(90deg);
+.burgerBtn:hover .burgerBtn__padding {
+	transform: rotate(90deg);
+}
+
+@media (min-width: 768px) {
+	.burgerBtn {
+		display: none;
 	}
 }
