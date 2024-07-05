@@ -4,7 +4,7 @@
   // background-image: url("../images/logo/SVG/Zasób.svg");
   background-image: url("../images/logo/probysvg/kwn.svg");
   padding-bottom: 7rem;
-  padding-top: 7rem;
+  padding-top: 13rem;
   background-position: center;
   background-attachment: fixed;
 
@@ -90,4 +90,9 @@
 
 .rotate {
   transform: translate(-50%, -50%) rotate(90deg);
+}
+@media (min-width: 768px) {
+  .accordion {
+    padding-top: 7rem;
+  }
 }

@@ -593,7 +593,7 @@ main {
 .accordion {
   background-image: url("../images/logo/probysvg/kwn.svg");
   padding-bottom: 7rem;
-  padding-top: 7rem;
+  padding-top: 13rem;
   background-position: center;
   background-attachment: fixed;
 }
@@ -672,6 +672,11 @@ main {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
+@media (min-width: 768px) {
+  .accordion {
+    padding-top: 7rem;
+  }
+}
 .zone__wrapper {
   display: flex;
   justify-content: space-between;
